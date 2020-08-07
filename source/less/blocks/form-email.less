@@ -1,0 +1,49 @@
+.form-email {
+  position: relative;
+
+  padding-top: 5px;
+  margin-top: -5px;
+}
+
+.form-email__input {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .form-email {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding: 35px 50px 50px 190px;
+
+    background-color: @gray-white;
+  }
+
+  .form-email__legend-text {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 45px;
+  }
+
+  .form-email__input {
+    margin-top: -20px;
+    width: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-email {
+    padding-right: 225px;
+  }
+
+  .form-email__legend-text {
+    left: 105px;
+  }
+
+  .form-email__input {
+    width: 700px;
+  }
+}

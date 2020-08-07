@@ -1,0 +1,68 @@
+.video-player {
+  position: relative;
+}
+
+.video-player__play-button {
+  .hide-text();
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 101px;
+  height: 77px;
+  margin-top: -40px;
+  margin-left: -50px;
+
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/play.svg");
+  background-size: 101px 77px;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    width: 121px;
+    height: 92px;
+
+    margin-top: -50px;
+    margin-left: -55px;
+
+    background-size: 121px 92px;
+  }
+
+  &:active {
+    width: 81px;
+    height: 62px;
+
+    margin-top: -30px;
+    margin-left: -35px;
+
+    background-size: 81px 62px;
+    opacity: 0.3;
+  }
+}
+
+.video-player__thumbnail {
+  background-color: @gray-white;
+}
+
+@media (min-width: @tablet-width) {
+  .video-player__play-button {
+    margin-left: -50px;
+  }
+
+  .video-player__thumbnail {
+    width: 670px;
+    height: 455px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-player__thumbnail {
+    width: 682px;
+    height: 100%;
+  }
+}

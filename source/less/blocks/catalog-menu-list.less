@@ -1,0 +1,137 @@
+.catalog-menu-list {
+  .list-reset();
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.catalog-menu-list__item {
+  padding: 0;
+  width: 100%;
+  height: 105px;
+
+  &--tiffani {
+    background-color: @tiffani;
+  }
+
+  &--dark-tiffani {
+    background-color: @dark-tiffani;
+  }
+
+  &:hover,
+  &:focus {
+    height: 110px;
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+
+  &:active {
+    height: 105px;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.catalog-menu-list__item:hover .catalog-menu-list__text::after,
+.catalog-menu-list__item:focus .catalog-menu-list__text::after {
+  opacity: 0.7;
+}
+
+.catalog-menu-list__item:active .catalog-menu-list__text {
+  opacity: 0.3;
+}
+
+.catalog-menu-list__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+  width: 100%;
+
+  font-size: 19px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  color: @white;
+}
+
+.catalog-menu-list__text {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 110px;
+}
+
+.catalog-menu-list__interior,
+.catalog-menu-list__toy {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+}
+
+.catalog-menu-list__interior {
+  &::after {
+    right: -140px;
+
+    width: 40px;
+    height: 62px;
+    margin-top: -31px;
+
+    background-image: url("../img/interior.svg");
+  }
+}
+
+.catalog-menu-list__toy {
+  &::after {
+    right: -150px;
+
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+
+    background-image: url("../img/toy.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-menu-list {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+
+  .catalog-menu-list__item {
+    min-height: 120px;
+  }
+
+  .catalog-menu-list__interior::after {
+    right: -150px;
+  }
+
+  .catalog-menu-list__toys {
+    &::before {
+      right: 35px;
+    }
+  }
+
+  .catalog-menu-list__link {
+    padding: 30px 30px 30px 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-menu-list__interior::after,
+  .catalog-menu-list__toy::after {
+    right: -345px;
+  }
+
+  .catalog-menu-list__link {
+    padding: 35px 30px 30px 35px;
+  }
+}

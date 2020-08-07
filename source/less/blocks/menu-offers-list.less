@@ -1,0 +1,45 @@
+.menu-offers-list {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  z-index: 1;
+
+  display: none;
+
+  .list-reset();
+}
+
+.menu-offers-list__item {
+  padding: 25px 57px 0 50px;
+
+  box-shadow: none;
+  cursor: pointer;
+
+  &:last-child {
+    padding-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu-offers-list__link {
+  font-size: 15px;
+  color: @black;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+@media (min-width: @desktop-width) {
+  .menu-offers-list {
+    display: flex;
+    flex-direction: row;
+  }
+}

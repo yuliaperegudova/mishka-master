@@ -1,0 +1,43 @@
+.about-us {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 30px 15px 30px;
+}
+
+.about-us__header {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: 768px;
+    padding: 50px 50px 80px 50px;
+  }
+
+  .about-us__header {
+    margin-left: -5px;
+
+    font-size: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 1150px;
+    padding: 40px 50px 80px 50px;
+  }
+
+  .about-us__header {
+    margin: 0;
+    padding: 15px 0 0 170px;
+
+    font-size: 53px;
+  }
+}

@@ -1,0 +1,50 @@
+.form-phone {
+  position: relative;
+
+  padding-top: 0;
+  margin-top: -5px;
+}
+
+.form-phone__input {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-phone {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding: 40px 50px 0 190px;
+
+    background-color: @gray-white;
+  }
+
+  .form-phone__input {
+    margin-top: 10px;
+    width: 500px;
+  }
+
+  .form-phone__legend-text {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-phone {
+    padding-right: 225px;
+  }
+
+  .form-phone__legend-text {
+    left: 105px;
+  }
+
+  .form-phone__input {
+    width: 700px;
+  }
+}

@@ -1,0 +1,150 @@
+.manufacture {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 30px 60px 30px;
+}
+
+.manufacture__wrapper {
+  position: relative;
+  z-index: 1;
+
+  border: 1px solid @soft-white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.manufacture__header {
+  position: relative;
+
+  margin: 0;
+  padding: 20px 40px 25px 90px;
+
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  color: @black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+
+    margin-top: -20px;
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/video.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.manufacture__description-wrapper {
+  padding: 20px 30px 35px 30px;
+}
+
+.manufacture__description {
+  margin: 0 10px 25px 0;
+
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.85;
+  letter-spacing: normal;
+  color: @gray-black;
+}
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    width: 768px;
+    padding: 0 50px 60px 50px;
+  }
+
+  .manufacture__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .manufacture__video {
+    order: 1;
+  }
+
+  .manufacture__description-wrapper {
+    order: 3;
+
+    padding: 0 40px;
+  }
+
+  .manufacture__header {
+    order: 2;
+
+    padding: 30px 40px 25px 110px;
+
+    font-size: 20px;
+
+    &::before {
+      left: 40px;
+
+      margin-top: -15px;
+    }
+  }
+
+  .manufacture__description {
+    margin: 10px 0 35px 0;
+
+    font-size: 15px;
+  }
+
+  .manufacture__btn-wrapper {
+    padding: 0 0 45px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture {
+    position: relative;
+
+    width: 1150px;
+    padding: 0 50px 100px 50px;
+  }
+
+  .manufacture__wrapper {
+    flex-direction: row;
+  }
+
+  .manufacture__header {
+    position: absolute;
+    right: 250px;
+    top: 65px;
+
+    width: 145px;
+
+    &::before {
+      left: 115px;
+      top: -5px;
+    }
+  }
+
+  .manufacture__description {
+    margin-bottom: 55px;
+  }
+
+  .manufacture__description-wrapper {
+    max-width: 230px;
+    padding: 0;
+    margin: 170px 55px 60px 80px;
+  }
+
+  .manufacture__btn-wrapper {
+    padding: 0;
+  }
+}

@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 14px 15px;
+  width: 100%;
+
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: normal;
+  color: @gray-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 2px solid @gray-black;
+  background-color: @white;
+
+  &:hover,
+  &:focus {
+    color: @white;
+
+    background-color: @gray-black;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

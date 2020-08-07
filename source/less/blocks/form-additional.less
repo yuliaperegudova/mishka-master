@@ -1,0 +1,49 @@
+.form-additional {
+  padding: 0 0 15px 0;
+  margin-top: -5px;
+}
+
+.form-additional__textarea {
+  width: 100%;
+  min-height: 140px;
+  margin-top: 25px;
+  padding: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-additional {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 55px 40px 45px 215px;
+  }
+
+  .form-additional__textarea {
+    margin: 0;
+    max-width: 500px;
+  }
+
+  .form-additional__legend-text {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 75px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-additional {
+    padding-right: 225px;
+    padding-left: 220px;
+    padding-bottom: 55px;
+  }
+
+  .form-additional__legend-text {
+    left: 115px;
+  }
+
+  .form-additional__textarea {
+    max-width: 700px;
+  }
+}

@@ -1,0 +1,140 @@
+.form-color__legend {
+  padding-inline-end: 10px;
+}
+
+.form-color__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-color__checkbox {
+  margin-left: 60px;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.form-color__checkbox-indicator {
+  position: relative;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -65px;
+
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+
+    border: 2px solid @gray-black;
+  }
+
+  &--selected {
+    &::before {
+      background-image: url("../img/tick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 16px;
+    }
+  }
+}
+
+.form-color__checkbox:hover .form-color__checkbox-indicator::before,
+.form-color__checkbox:focus .form-color__checkbox-indicator::before {
+  border-color: @tiffani;
+}
+
+.form-color__checkbox:focus .form-color__checkbox-indicator::before {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .form-color {
+    position: relative;
+
+    margin-top: 60px;
+    padding: 70px 55px 70px 50px;
+  }
+
+  .form-color__legend-text {
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    left: 50px;
+  }
+
+  .form-color__wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 180px;
+    height: 165px;
+  }
+
+  .form-color__checkbox {
+    margin-left: 65px;
+    width: 155px;
+
+    &:nth-child(3n) {
+      margin-bottom: 0;
+    }
+
+    &:not(:nth-child(n + 5)) {
+      margin-bottom: 55px;
+    }
+  }
+
+  .form-color__checkbox-indicator {
+    position: relative;
+
+    &::before {
+      left: -80px;
+
+      width: 50px;
+      height: 50px;
+      margin-top: -25px;
+    }
+
+    &--selected {
+      &::before {
+        background-size: 33px 22px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-color {
+    padding: 70px 90px 0 55px;
+  }
+
+  .form-color__legend-text {
+    left: 105px;
+  }
+
+  .form-color__wrapper {
+    padding-left: 185px;
+    width: 930px;
+  }
+
+  .form-color__checkbox {
+    &:nth-child(3n),
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(2n) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(n + 4) {
+      margin-left: 65px;
+    }
+  }
+}

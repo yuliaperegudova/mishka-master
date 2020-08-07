@@ -1,0 +1,264 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0 55px 0;
+}
+
+.form__belt {
+  position: relative;
+  z-index: 0;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+.form__fixed-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px 30px 0 35px;
+
+  &--bottom {
+    padding-top: 0;
+  }
+
+  &--inputs {
+    padding-bottom: 0;
+  }
+
+  &--textarea {
+    padding: 25px 25px 0 30px;
+  }
+}
+
+.form__fieldset {
+  padding-inline-start: 0;
+  padding: 30px 0 15px 0;
+
+  border: none;
+  border-top: 1px solid @tiffani;
+}
+
+.form__legend {
+  padding-inline-start: 0;
+  padding-inline-end: 20px;
+
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.94;
+  letter-spacing: normal;
+  color: @tiffani;
+  text-transform: uppercase;
+}
+
+.form__label {
+  position: relative;
+  z-index: -1;
+
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.06;
+  letter-spacing: normal;
+  color: @black;
+
+  cursor: pointer;
+}
+
+.form__input {
+  padding: 15px 0 15px 0;
+
+  font-size: 19px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.95;
+
+  border: none;
+  box-shadow: inset 0 -2px 0 0 @black;
+
+  &::placeholder {
+    min-height: 17px;
+
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 -2px 0 0 @middle-tiffani;
+    outline: none;
+  }
+}
+
+.form__input-wrapper:hover svg,
+.form__input-wrapper:focus svg,
+.form__input-wrapper:active svg {
+  fill: @middle-tiffani;
+}
+
+.form__input-wrapper:hover .form__svg,
+.form__input-wrapper:focus .form__svg,
+.form__input-wrapper:active .form__svg {
+  opacity: 1;
+}
+
+.form__textarea {
+  padding: 15px  0;
+
+  font-size: 19px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.95;
+
+  border: 2px solid @gray-black;
+
+  resize: none;
+  overflow: auto;
+
+  &::placeholder {
+    min-height: 17px;
+
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @middle-tiffani;
+    outline: none;
+  }
+}
+
+.form__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__svg {
+  position: absolute;
+  right: 5px;
+  bottom: 30px;
+
+  opacity: 0.2;
+
+  &--email {
+    right: 0;
+    bottom: 20px;
+  }
+}
+
+.form__button {
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    padding: 0 0 50px 0;
+  }
+
+  .form__belt {
+    width: 768px;
+    background-color: @gray-white;
+  }
+
+  .form__fixed-wrapper {
+    width: 768px;
+    padding: 0;
+  }
+
+  .form__label {
+    font-size: 19px;
+  }
+
+  .form__fieldset {
+    border: none;
+  }
+
+  .form-name__input-wrapper:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .form__input {
+    width: 100%;
+    padding: 5px 15px 20px 15px;
+    margin-left: 25px;
+    margin-top: -12px;
+
+    background-color: transparent;
+
+    &::placeholder {
+      min-height: 19px;
+
+      font-size: 19px;
+    }
+  }
+
+  .form__textarea::placeholder {
+    min-height: 19px;
+
+    font-size: 19px;
+  }
+
+  .form__bottom-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 55px 0 50px;
+  }
+
+  .form__button {
+    max-width: 230px;
+  }
+
+  .form__svg {
+    right: 80px;
+    top: 60px;
+
+    &--email {
+      right: 75px;
+      top: 35px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding: 0;
+  }
+
+  .form__belt {
+    width: 100%;
+  }
+
+  .form__fixed-wrapper {
+    width: 1150px;
+    padding: 0;
+  }
+
+  .form__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 0 50px 225px;
+    padding: 0;
+  }
+
+  .form__svg {
+    right: 230px;
+  }
+}
